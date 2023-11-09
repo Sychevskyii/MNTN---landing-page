@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="bg-wrapper">
-      <header class="header">
+      <header class="header" id="header">
         <div class="container">
           <div class="header-menu menu">
             <a href="./index.html" class="header-logo logo">MNTN</a>
@@ -38,18 +38,29 @@
               </ul>
             </nav>
             <div class="account">
-              <svg class="icon-cart" width="24" height="24">
-                <use href="./images/svg/sprite.svg#icon-cart"></use>
-              </svg>
-              <button type="button" class="account-button">
-                <span>Account</span>
+              <button type="button" class="account-button" data-modal-open>
+                <svg class="icon-cart" width="24" height="24">
+                  <use href="./images/svg/sprite.svg#icon-cart"></use></svg
+                >Account
               </button>
+              <div class="backdrop " data-modal>
+                <div class="modal-wrapper">
+                    <button type="button" class="btn-close" data-modal-close>
+                      <svg class="icon-close" width="24" height="24">
+                      <use href="./images/svg/sprite.svg#icon-close"></use>
+                      </svg>
+                    </button>
+                    <p class="love-text">Кохаю Амінку</p>
+                    <p class="love-text">&#128143;</p>
+                    <p class="love-text margin-text">Ти щастячко</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </header>
       <main>
-        <section class="hero">
+        <section class="hero" id="hero">
           <div class="container container-hero">
             <aside class="sidebar">
               <p class="sidebar-text">Follow us</p>
@@ -67,21 +78,23 @@
               <h1 class="section-block-title-hero title">
                 Be prepared for the Mountains and beyond!
               </h1>
-              <a href="#" class="section-block-action-hero"
+              <a href="#started" class="section-block-action-hero"
                 >scroll down
                 <svg class="icon-arrow-down" width="16" height="24">
                   <use href="./images/svg/sprite.svg#icon-arrow"></use></svg
               ></a>
             </div>
             <aside class="scrollbar">
-              <span class="scrollbar-position-start ">Start</span>
-              <span class="scrollbar-position-01 ">01</span>
-              <span class="scrollbar-position-02 active">02</span>
-              <span class="scrollbar-position-03 ">03</span>
+              <a href="#header" class="scrollbar-link scrollbar-link-start active"
+                >Start</a
+              >
+              <a href="#started" class="scrollbar-link scrollbar-link-01">01</a>
+              <a href="#hiking" class="scrollbar-link scrollbar-link-02">02</a>
+              <a href="#key" class="scrollbar-link scrollbar-link-03">03</a>
             </aside>
           </div>
         </section>
-        <section class="started started-section">
+        <section class="started started-section" id="started">
           <div class="container">
             <div class="section-block-wrapper">
               <div class="section-block">
@@ -91,12 +104,12 @@
                   What level of hiker are you?
                 </h2>
                 <p class="section-block-text">
-                  Determining what level of hiker you are can be an important tool
-                  when planning future hikes. This hiking level guide will help
-                  you plan hikes according to different hike ratings set by
-                  various websites like All Trails and Modern Hiker. What type of
-                  hiker are you – novice, moderate, advanced moderate, expert, or
-                  expert backpacker?
+                  Determining what level of hiker you are can be an important
+                  tool when planning future hikes. This hiking level guide will
+                  help you plan hikes according to different hike ratings set by
+                  various websites like All Trails and Modern Hiker. What type
+                  of hiker are you – novice, moderate, advanced moderate,
+                  expert, or expert backpacker?
                 </p>
                 <a href="#" class="section-block-action"
                   >read more
@@ -113,19 +126,21 @@
             </div>
           </div>
         </section>
-        <section class="hiking section">
+        <section class="hiking section" id="hiking">
           <div class="container">
             <div class="section-block-wrapper reverse">
               <div class="section-block">
                 <span class="section-block-number">02</span>
-                <h3 class="section-block-suptitle suptitle">Hiking Essentials</h3>
+                <h3 class="section-block-suptitle suptitle">
+                  Hiking Essentials
+                </h3>
                 <h2 class="section-block-title title">
                   Picking the right Hiking Gear!
                 </h2>
                 <p class="section-block-text">
                   The nice thing about beginning hiking is that you don’t really
-                  need any special gear, you can probably get away with things you
-                  already have. Let’s start with clothing. A typical mistake
+                  need any special gear, you can probably get away with things
+                  you already have. Let’s start with clothing. A typical mistake
                   hiking beginners make is wearing jeans and regular clothes,
                   which will get heavy and chafe wif they get sweaty or wet.
                 </p>
@@ -144,10 +159,14 @@
             </div>
           </div>
         </section>
-        <section class="key section">
+        <section class="key section" id="key">
           <div class="container">
-            <div class="section-block-wrapper">
-              <div class="section-block">
+            <div
+              class="section-block-wrapper"
+              data-relative-input="true"
+              id="scene"
+            >
+              <div class="section-block" data-depth="0.2">
                 <span class="section-block-number">03</span>
                 <h3 class="section-block-suptitle suptitle">
                   where you go is the key
@@ -158,9 +177,9 @@
                 <p class="section-block-text">
                   To start, print out the hiking guide and map. If it’s raining,
                   throw them in a Zip-Lock bag. Read over the guide, study the
-                  map, and have a good idea of what to expect. I like to know what
-                  my next landmark is as I hike. For example, I’ll read the guide
-                  and know that say, in a mile, I make a right turn at the
+                  map, and have a good idea of what to expect. I like to know
+                  what my next landmark is as I hike. For example, I’ll read the
+                  guide and know that say, in a mile, I make a right turn at the
                   junction..
                 </p>
                 <a href="#" class="section-block-action"
@@ -185,7 +204,8 @@
             <div class="copyright">
               <a href="" class="footer-logo logo">MNTN</a>
               <p class="copyright-text text">
-                Get out there & discover your next slope, mountain & destination!
+                Get out there & discover your next slope, mountain &
+                destination!
               </p>
               <p class="copyright-text-opacity text">
                 Copyright 2019 MNTN, Inc. Terms & Privacy
@@ -231,5 +251,7 @@
         </div>
       </footer>
     </div>
+    <!-- Modal -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>
